@@ -1,0 +1,215 @@
+/*
+    inspired by: https://dribbble.com/shots/16831003-Be-Kind
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+body{
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 300px; 
+    height: 300px;
+    background-color: rgb(2, 59, 182);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+}
+
+.sea {
+    height: 200px;
+    width: 70%;
+    margin: auto;
+    position: absolute; 
+    top: 150px;
+    overflow: hidden;
+}
+
+#sea-wave {
+    position: absolute; 
+    margin: auto; 
+    top: -45px;
+}
+.mountain1 {
+    position: absolute; 
+    margin: auto; 
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255, 231, 10);
+    top: 150px;
+    left: 50%;
+    border-radius: 63% 45% 0% 100% / 100% 64% 36% 0%;
+    overflow: hidden;
+}
+
+.snow{
+    position: absolute; 
+    margin: auto; 
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.snow:before {
+    content:"";
+    margin: auto; 
+    position: absolute;
+    height: 50px;
+    width: 50%;
+    background-color: white;
+    border-radius: 0px 50% 70% 50%;
+    left: 20px;
+    top: 20px;
+}
+
+.snow:after{
+    content:"";
+    margin: auto; 
+    position: absolute;
+    height: 30px;
+    width: 50%;
+    background-color: white;
+    left: 80px;
+    top: 25px;
+    border-radius: 0px 0px 50% 50%;
+}
+.tree{
+    margin: auto;
+    position: absolute; 
+    height: 70px; 
+    width: 10px;
+    border: 10px solid #02a15f;
+    border-radius: 20px 0 0 10px;
+    top: 45%;
+    right: 2px;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+    transform: rotate(180deg);
+}
+.tree-branches {
+    height: 20px;
+    width: 40px;
+    background-color: #02854e;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 47%;
+    right: 190px;
+    border-radius: 80px 80px 10px 10px;
+}
+.tree-branches:before{
+    content:"";
+    height: 15px;
+    width: 30px;
+    background-color: #027243;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 4%;
+    right: -10px;
+    border-radius: 80px 80px 10px 10px;
+}
+.tree-branches:after{
+    content:"";
+    height: 10px;
+    width: 20px;
+    background-color: #015532;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: -32%;
+    left: 20px;
+    border-radius: 80px 80px 10px 10px;
+}
+
+.wrapper-text,
+.wrapper-text1{
+    position: absolute; 
+    margin: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: white;
+}
+
+.wrapper-text{
+    top: 40px;
+    left: 100px;
+}
+.wrapper-text1{
+    top: 80px;
+    left: 80px;
+}
+
+.pink{
+    color: pink;
+}
+.yellow{
+    color: yellow;
+}
+.blue{
+    color: rgb(28, 172, 255);
+    text-transform: lowercase;;
+}
+
+.bird{
+    position: absolute;
+    margin: 0;
+    width: 40px;
+    height: 15px;
+    border: 10px solid white;
+    top: 20%;
+    right: 15%;
+    border-radius: 10px 20% 80% 50%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.wing {
+    position: absolute;
+    margin:0;
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    top: 7px;
+    right: 10px;
+    border-radius:56% 44% 92% 8% / 97% 30% 70% 3%;
+}
+.wing:before{
+    content:"";
+    position: absolute;
+    margin:0;
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    top: 16px;
+    border-radius:56% 44% 92% 8% / 97% 30% 70% 3%;
+    transform: rotateY(180deg);
+}
+.beak{
+    position: absolute;
+    margin:0;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(90deg);
+    top: 17.5px;
+}
+.eye{
+    position: absolute;
+    margin:0;
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 50%;
+    top: 16px;
+    left: 2px;
+}
