@@ -363,7 +363,10 @@ transform-origin: 100% -30%;
     opacity: 0.6;
   }
   50%{
-    transform:rotate(75deg);
+    transform:rotate(80deg);
+  }
+  80%{
+    opacity:0;
   }
   100%{
     transform:rotate(85deg);
