@@ -1,0 +1,372 @@
+/*design by https://dribbble.com/shots/2388283-SignUp*/
+$container-color: #f7cc3e;
+$truck-color: #4b98d6;
+$windshield-color: #a1dcff;
+$shine-color: #c7eaff;
+$design-color: #83c1f2;
+
+body {
+  background-color:#000;
+}
+.stars {
+  background-color: #eeeeee;
+  border-radius: 50%;
+  position: absolute;
+  z-index:-1;
+}
+.planet {
+  position: absolute;
+  overflow:hidden;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  top:20%;
+  left:50%;
+}
+.container {
+  position: absolute; 
+  margin: auto; 
+  width: 300px;
+  height: 300px; 
+  background-color: #2a4365;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius:50%;
+  border: none;
+}
+
+.truck {
+  position: absolute; 
+  height: 200px;
+  width: 200px;
+  transform-origin: 100% 0%;
+  transform: rotate(-30deg);
+  animation: fly 4s ease-in-out infinite;
+  
+  .roof {
+    position: relative; 
+    height: 29px;
+    width: 64px;
+    background-color: $truck-color;
+    transform: skewX(-70deg);
+    top: 125px;
+    left: 180px;
+    z-index:1;
+  }
+  .top-side {
+    position: absolute; 
+    height: 17px;
+    width: 80px;
+    background-color: $truck-color;
+    top: 153px;
+    left: 130px;
+    clip-path: polygon(15% 0, 90% 0, 76% 100%, 0% 100%);
+    box-shadow: 0 0 2px rgb(0,0,0,0.1);
+    z-index: 1;
+  }
+  .front-side {
+    position: absolute; 
+    height: 80px;
+    width: 60px;
+    background-color: $truck-color;
+    left: 130px;
+    top: 170px;
+    
+    z-index: 1;
+    .windshield {
+      position: absolute; 
+      height: 25px;
+      width: 60px;
+      background-color: $windshield-color;
+      overflow:hidden;
+      z-index: 1;
+      .ring {
+        position: relative; 
+        height: 25px; 
+        width: 25px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        left: 27px;
+        top: 2px;
+      }
+      .human {
+        position: absolute; 
+        height: 15px;
+        width: 15px;
+        background-color: #fadf96;
+        top: 10px;
+        right: 10px;
+        border-radius: 10px 10px 0 5px;
+        .hair {
+          position: relative; 
+          height: 6px;
+          width: 18px;
+          left: -4px;
+          top: -1px;
+          background-color: #ad7e07;
+          border-radius:100% 0% 59% 41% / 39% 100% 0% 61%;
+        }
+        .sunglasses {
+          position: relative;
+          height: 5px;
+          width: 7px;
+          background-color: #000;
+          border-radius: 0 0 30px 30px;
+          box-shadow: 7px 0 0 0 #000;
+        }
+      }
+    }
+    .windshield:before {
+      content:"";
+      position: absolute;
+      height: 40px;
+      width: 10px;
+      background-color: $shine-color;
+      transform: rotate(45deg);
+      left: 10px;
+      top: -10px;
+    }
+    .design {
+      position: relative; 
+      height: 15px;
+      width: 64px;
+      background-color: $design-color;
+      top: 25px;
+      left: -2px;
+     clip-path: polygon(0 0, 100% 0, 69% 51%, 53% 91%, 50% 100%, 47% 89%, 32% 50%);
+      z-index: 0;
+    }
+    .lights {
+      position: absolute; 
+      height: 7px;
+      width: 7px;
+      background-color: $container-color;
+      bottom: 20px;
+      left: 5px;
+      border-radius: 50%;
+      box-shadow: 40px 0px 0px 0px  $container-color;
+      .light-1{
+        position: absolute;
+        height: 200px;
+        width: 60px;
+        background-color: $container-color;
+       clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+        transform-origin: 100% 0%;
+        transform:rotate(90deg);
+        top: 35px;
+        left: -55px;
+        opacity:0.6;
+        z-index:3;
+        animation: turn-off 4s ease-out infinite;
+      }
+      .light-2 {
+        position: absolute;
+        height: 200px;
+        width: 60px;
+        background-color: $container-color;
+       clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+        transform-origin: 100% 0%;
+        transform:rotate(90deg);
+        top: 35px;
+        left: -15px;
+        opacity:0.6;
+        z-index:3;
+        animation: turn-off 4s ease-out infinite;
+      }
+    }
+    .registration {
+      position: absolute; 
+      height: 5px;
+      width: 20px;
+      background-color: #fff;
+      bottom: 3px;
+      left: 15px;
+      font-size: 5px;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      padding: 2px;
+      box-shadow: 2px 2px 0 0 rgba(0,0,0,0.2);
+      border-radius: 1px;
+      z-index: 1;
+    }
+    .bumper {
+      position: absolute; 
+      height: 10px;
+      width: 60px;
+      background-color: #333333;
+      bottom: 0;
+      z-index:0;
+    }
+  }
+  .left-side {
+    position: absolute; 
+    height: 94px;
+    width: 92px;
+    background-color: #4b99e6;
+   transform: skewY(-20deg);
+transform-origin: 100% -30%;
+    top: 124px;
+    left: 190px;
+    border-radius: 0 0 2px 2px;
+    z-index:0;
+    .windshield-part {
+      position: absolute; 
+      height: 26px;
+      width: 15px;
+      background-color: #9cdaff;
+      top: 12px;
+      border-radius: 0 4px 4px 0;
+    }
+    .logo {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      top: 30px;
+      .circle {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 40px;
+        border: 5px solid $container-color;
+        border-radius: 0 30px 30px 0;
+        border-left: none;
+      }
+      .logo-lines {
+        position: absolute;
+        height: 5px;
+        width: 15px;
+        left: 30px;
+        background-color: $container-color;
+        border-radius: 10px 0 0 10px;
+      }
+      .logo-lines:before{
+        content:"";
+        position: absolute;
+        height: 5px;
+        width: 15px;
+        top: 7px;
+        background-color: $container-color;
+        border-radius: 10px;
+      }
+      .logo-lines:after{
+        content:"";
+        position: absolute;
+        height: 5px;
+        width: 10px;
+        top: 14px;
+        left: 3px;
+        background-color: $container-color;
+        border-radius: 10px;
+      }
+      .vertical-line {
+        position: absolute;
+        height: 10px;
+        width: 5px;
+        top: 15px;
+        left: 40px;
+        background-color: $container-color;
+        border-radius: 0 10px 0 0;
+      }
+    }
+  }
+  .bottom-side {
+    position: absolute;
+    height: 20px;
+    width: 92px;
+    top: 207px;
+    left: 190px;
+    //background-color: #fff;
+    transform: skewY(-20deg);
+    transform-origin: 100% -30%;
+    border-radius: 0 0 10px 10px;
+    .fender {
+      position: absolute;
+      height: 7px;
+      width: 10px;
+      background-color: #000;
+      left: 15px;
+      top: 3px;
+      border-radius: 10px 10px 0 0;
+      box-shadow: 50px 0 0 #000;
+    }
+    .tire {
+      position: absolute;
+      height: 12px;
+      width: 15px;
+      background-color: #09214a;
+      top: 9px;
+      left: 13px;
+      border-radius: 50px/25px;
+      box-shadow: 50px 0 0 #09214a;
+    }
+    .tire:before {
+      content:"";
+      position: absolute;
+      background-color: #234c91;
+      height: 3px;
+      width: 15px;
+      top: 8px;
+      border-radius: 50px/25px;
+      box-shadow: 50px 0 0 #234c91;
+      animation: tire-move 4s ease-in-out infinite;
+    }
+    .tire:after{
+      content:"";
+      position: absolute;
+      height: 5px;
+      width: 15px;
+      border-radius: 50px/25px;
+      background-color: #234c91;
+      left: -58px;
+      top: -15px;
+      transform: skewY(10deg);
+    }
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform-origin: 100% 0%;
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform-origin: 0% 50%;
+    transform: rotate(15deg);
+  }
+  100% {
+    transform-origin: 0% 50%;
+    transform: rotate(5deg);
+  }
+}
+@keyframes tire-move{
+  0%{
+    height: 3px;
+  }
+  50%{
+    height:5px;
+  }
+  100%{
+    height:3px;
+  }
+}
+
+@keyframes turn-off{
+  0%{
+    opacity: 0.6;
+    transform:rotate(90deg);
+  }
+  26%{
+    opacity: 0.4;
+  }
+  37%{
+    opacity: 0.6;
+  }
+  50%{
+    transform:rotate(75deg);
+  }
+  100%{
+    transform:rotate(85deg);
+    opacity:0;
+  }
+}
