@@ -1,0 +1,163 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #000;
+  color: #333;
+	filter: contrast(25);
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	.ball {
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		border-radius: 50%;
+		background: #fff;
+		border: 1px solid #fff;
+		transform: translate(-50%, -50%);
+		top: -40px;
+		left: -30px;
+		filter: blur(5px);
+		animation: rotate 30s infinite;
+		&:before {
+			content: "";
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			top: 0%;
+  		left: 0%;
+			background: #fff;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			filter: blur(5px);
+			animation: rotate-blob-1 5s ease-in-out infinite ;
+		}
+		&:after {
+			content:"";
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			top: 0%;
+  		left: 0%;
+			background: #fff;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			filter: blur(5px);
+			animation: rotate-blob-2 5s ease-in-out infinite alternate-reverse;
+		}
+	}
+	.blob-1{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		filter: blur(5px);
+		transform-origin: 220%;
+		animation: rotate-blob-1 10s ease-in-out infinite alternate;
+		&:before {
+				content: "";
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				top: 0px;
+				left: 0px;
+				border-radius: 50%;
+				filter: blur(5px);
+				transform-origin: 250%;
+				animation: rotate-blob-1 12s ease-in-out infinite alternate-reverse;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			background: #fff;
+			top: 0px;
+			left: 0px;
+			border-radius: 50%;
+			filter: blur(5px);
+			transform-origin: 330%;
+			animation: rotate-blob-1 10s ease-in-out infinite alternate;
+		}
+	}
+	.blob-2 {
+		position: absolute; 
+		width: 16px;
+		height: 16px;
+		background: #fff;
+		border-radius: 50%;
+		filter: blur(5px);
+		transform-origin: -280%;
+		animation: rotate-blob-2 20s ease-in-out infinite alternate-reverse;
+		animation-delay: 5s;
+		&:before {
+			content:"";
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: 10px;
+			left: 10px;
+			background: #fff;
+			border-radius: 50%;
+			filter: blur(5px);
+			transform-origin: -250%;
+			animation: rotate-blob-2 8s ease-in-out infinite alternate-reverse;
+		}
+		&:after {
+			content:"";
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			top: 0;
+			left: 0;
+			background: #fff;
+			border-radius: 50%;
+			filter: blur(5px);
+			transform-origin: -150%;
+			animation: rotate-blob-2 12s ease-in-out infinite alternate-reverse;
+		}
+	}
+}
+@keyframes rotate-blob-1{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-blob-2 {
+	0%{
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-360deg);
+	}
+}
